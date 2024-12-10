@@ -1,3 +1,7 @@
+"use client";
+
+import { useRef } from "react";
+import { motion, useAnimationControls } from "framer-motion";
 import Image from "next/image";
 import { Button } from "@/components/ui/button";
 import { ProjectCard } from "@/components";
@@ -56,6 +60,22 @@ const projects = [
 ];
 
 export default function Home() {
+  const projectsRef = useRef<HTMLElement>(null);
+  const controls = useAnimationControls();
+
+  const scrollToProjects = async () => {
+    if (projectsRef.current) {
+      await controls.start({
+        y: [0, -20, 0],
+        transition: { duration: 0.3 },
+      });
+      projectsRef.current.scrollIntoView({
+        behavior: "smooth",
+        block: "start",
+      });
+    }
+  };
+
   return (
     <div className="container mx-auto px-4 py-16">
       <section className="mb-32 text-center">
@@ -64,8 +84,8 @@ export default function Home() {
             <Image
               src="https://media.licdn.com/dms/image/v2/C4E03AQES7mIbBslr5A/profile-displayphoto-shrink_800_800/profile-displayphoto-shrink_800_800/0/1626736649555?e=1739404800&v=beta&t=ufaA4AIA_Eh8bhzhRTfFaLd_gGe8hMvRBJ3aexboHyQ"
               alt="Gonzalo Cordoba | Frontend Developer"
-              layout="fill"
-              objectFit="cover"
+              fill
+              style={{ objectFit: "cover" }}
               priority
             />
           </div>
@@ -81,14 +101,14 @@ export default function Home() {
             colaborar en proyectos de manera ágil y efectiva.
           </p>
           <div className="mt-8">
-            <Button asChild>
-              <a href="#projects">Ver Proyectos</a>
-            </Button>
+            <motion.div animate={controls}>
+              <Button onClick={scrollToProjects}>Ver Proyectos</Button>
+            </motion.div>
           </div>
         </div>
       </section>
 
-      <section id="projects" className="mb-32">
+      <section ref={projectsRef} id="projects" className="mb-32">
         <h2 className="mb-8 text-3xl font-bold tracking-tight">
           Proyectos Destacados
         </h2>
