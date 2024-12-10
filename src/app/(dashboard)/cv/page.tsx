@@ -33,12 +33,20 @@ const experiences = [
 ];
 
 const skills = [
-  { name: "React", logo: "/logos/react.svg" },
-  { name: "TypeScript", logo: "/logos/typescript.svg" },
-  { name: "Next.js", logo: "/logos/nextjs.svg" },
-  { name: "Tailwind CSS", logo: "/logos/tailwindcss.svg" },
-  { name: "Node.js", logo: "/logos/nodejs.svg" },
-  { name: "Git", logo: "/logos/git.svg" },
+  { name: "React", logo: "/reactlogo.png" },
+  { name: "TypeScript", logo: "/typescript.png" },
+  { name: "JavaScript", logo: "/js.png" },
+  {
+    name: "Next.js",
+    logo: "/nextjs.png",
+  },
+  { name: "Git", logo: "/git.png" },
+  { name: "Node.js", logo: "/node.png" },
+  { name: "Docker", logo: "/docker.png" },
+  { name: "HTML5", logo: "/html.png" },
+  { name: "CSS", logo: "/css.png" },
+  { name: "Tailwind CSS", logo: "/tailwind.png" },
+  { name: "Figma", logo: "/figma.png" },
 ];
 
 export default function CV() {
