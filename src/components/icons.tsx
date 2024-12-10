@@ -7,6 +7,8 @@ import {
   Linkedin,
   TypeIcon as type,
   type LucideIcon,
+  Menu,
+  X,
 } from "lucide-react";
 
 export type Icon = LucideIcon;
@@ -17,4 +19,6 @@ export const Icons = {
   twitter: Twitter,
   gitHub: Github,
   linkedin: Linkedin,
+  menu: Menu,
+  x: X,
 };
