@@ -1,43 +1,56 @@
 import Image from "next/image";
 import { Button } from "@/components/ui/button";
 import { ProjectCard } from "@/components";
+import { IoLogoReact } from "react-icons/io5";
+import { BiLogoTypescript } from "react-icons/bi";
+import {
+  SiFramer,
+  SiNextdotjs,
+  SiShadcnui,
+  SiTailwindcss,
+} from "react-icons/si";
 
 const projects = [
   {
-    title: "Landing Page Stackly",
+    title: "Stackly- Landing Page",
     description:
-      "Landing page para una empresa de infraestructura de datos financieros.",
-    imageUrl: "/placeholder.svg?height=200&width=400",
-    projectUrl: "#",
+      "Desarrollé una landing page para una empresa especializada en infraestructura de datos financieros modernos para el sector fintech. Esta página fue diseñada para reflejar su enfoque en integrar datos de múltiples proveedores bancarios y bases de datos de fintech, con el objetivo de agilizar operaciones, reducir riesgos de fraude y mejorar la eficiencia operativa. El diseño se centró en transmitir confianza, innovación y la capacidad de la empresa para optimizar los procesos clave dentro de las fintechs.",
+    imageUrl: "/stackly.webp",
+    projectUrl: "https://landing-stackl.vercel.app/",
+    githubUrl: "https://github.com/gonzalo-cordoba/landing-stackly",
     technologies: [
-      { name: "React", logo: "/logos/react.svg" },
-      { name: "TypeScript", logo: "/logos/typescript.svg" },
-      { name: "Next.js", logo: "/logos/nextjs.svg" },
-      { name: "shadcn/ui", logo: "/logos/shadcn.svg" },
+      { name: "React", logo: <IoLogoReact /> },
+      { name: "TypeScript", logo: <BiLogoTypescript /> },
+      { name: "Next.js", logo: <SiNextdotjs /> },
+      { name: "shadcn/ui", logo: <SiShadcnui /> },
     ],
   },
   {
     title: "Landing Page Dot Dager",
-    description: "Landing page para un youtuber del ambiente IT.",
-    imageUrl: "/placeholder.svg?height=200&width=400",
-    projectUrl: "#",
+    description:
+      "Landing page para un youtuber del ambiente IT, destacando su trayectoria y mostrando sus pasiones. La página incluye secciones que detallan su contenido, intereses personales y la conexión que busca generar con su audiencia. El diseño fue creado para capturar la esencia de su marca y personalidad, con un enfoque en crear una experiencia atractiva y auténtica para sus seguidores.",
+    imageUrl: "/dager-landing.webp",
+    projectUrl: "https://dager-landing-serious.vercel.app/",
+    githubUrl: "https://github.com/gonzalo-cordoba/dager-landing-serious",
     technologies: [
-      { name: "React", logo: "/logos/react.svg" },
-      { name: "TypeScript", logo: "/logos/typescript.svg" },
-      { name: "Next.js", logo: "/logos/nextjs.svg" },
+      { name: "React", logo: <IoLogoReact /> },
+      { name: "TypeScript", logo: <BiLogoTypescript /> },
+      { name: "Next.js", logo: <SiNextdotjs /> },
     ],
   },
   {
     title: "Portfolio Personal",
     description: "Mi portfolio personal mostrando mis proyectos y habilidades.",
-    imageUrl: "/placeholder.svg?height=200&width=400",
+    imageUrl: "/portfolio.webp",
     projectUrl: "#",
+    githubUrl:
+      "https://github.com/gonzalo-cordoba/portfolio-developer-front-end",
     technologies: [
-      { name: "React", logo: "/logos/react.svg" },
-      { name: "TypeScript", logo: "/logos/typescript.svg" },
-      { name: "Next.js", logo: "/logos/nextjs.svg" },
-      { name: "Tailwind", logo: "/logos/tailwindcss.svg" },
-      { name: "Framer", logo: "/logos/framer.svg" },
+      { name: "React", logo: <IoLogoReact /> },
+      { name: "TypeScript", logo: <BiLogoTypescript /> },
+      { name: "Next.js", logo: <SiNextdotjs /> },
+      { name: "Tailwind", logo: <SiTailwindcss /> },
+      { name: "Framer", logo: <SiFramer /> },
     ],
   },
 ];

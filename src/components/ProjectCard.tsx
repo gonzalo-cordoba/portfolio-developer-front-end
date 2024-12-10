@@ -2,19 +2,22 @@
 
 import { motion } from "framer-motion";
 import Image from "next/image";
+import { type LucideIcon } from "lucide-react";
+import { JSX } from "react";
 import {
   Card,
   CardContent,
   CardDescription,
-  CardFooter,
   CardHeader,
   CardTitle,
+  CardFooter,
 } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
+import { IoLogoGithub } from "react-icons/io5";
 
 interface Technology {
   name: string;
-  logo: string;
+  logo: string | LucideIcon | JSX.Element;
 }
 
 interface ProjectCardProps {
@@ -22,6 +25,7 @@ interface ProjectCardProps {
   description: string;
   imageUrl: string;
   projectUrl: string;
+  githubUrl: string;
   technologies: Technology[];
 }
 
@@ -30,6 +34,7 @@ export function ProjectCard({
   description,
   imageUrl,
   projectUrl,
+  githubUrl,
   technologies,
 }: ProjectCardProps) {
   return (
@@ -38,7 +43,7 @@ export function ProjectCard({
       animate={{ opacity: 1, y: 0 }}
       transition={{ duration: 0.5 }}
     >
-      <Card className="overflow-hidden">
+      <Card className="overflow-hidden flex flex-col h-full">
         <Image
           src={imageUrl}
           alt={title}
@@ -50,7 +55,7 @@ export function ProjectCard({
           <CardTitle>{title}</CardTitle>
           <CardDescription>{description}</CardDescription>
         </CardHeader>
-        <CardContent>
+        <CardContent className="flex-grow">
           <div className="flex flex-wrap gap-4 mt-4">
             {technologies.map((tech, index) => (
               <motion.div
@@ -62,12 +67,19 @@ export function ProjectCard({
                 className="flex flex-col items-center"
               >
                 <div className="w-8 h-8 relative mb-1">
-                  <Image
-                    src={tech.logo}
-                    alt={`${tech.name} logo`}
-                    layout="fill"
-                    objectFit="contain"
-                  />
+                  {typeof tech.logo === "string" ? (
+                    <Image
+                      src={tech.logo}
+                      alt={`${tech.name} logo`}
+                      width={32}
+                      height={32}
+                      objectFit="contain"
+                    />
+                  ) : typeof tech.logo === "function" ? (
+                    <tech.logo className="w-8 h-8" />
+                  ) : (
+                    tech.logo
+                  )}
                 </div>
                 <span className="text-xs text-muted-foreground">
                   {tech.name}
@@ -76,10 +88,16 @@ export function ProjectCard({
             ))}
           </div>
         </CardContent>
-        <CardFooter>
-          <Button asChild>
+        <CardFooter className="flex justify-between gap-4">
+          <Button asChild variant="default" className="flex-1">
             <a href={projectUrl} target="_blank" rel="noopener noreferrer">
               Ver Proyecto
+            </a>
+          </Button>
+          <Button asChild variant="outline" className="flex-1">
+            <a href={githubUrl} target="_blank" rel="noopener noreferrer">
+              <IoLogoGithub className="mr-2 h-4 w-4" />
+              Github
             </a>
           </Button>
         </CardFooter>
