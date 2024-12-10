@@ -49,20 +49,23 @@ export default function Home() {
         <div className="flex flex-col items-center">
           <div className="mb-8 relative w-40 h-40 overflow-hidden rounded-full border-4 border-primary">
             <Image
-              src="/tu-foto.jpg"
-              alt="Tu Nombre"
+              src="https://media.licdn.com/dms/image/v2/C4E03AQES7mIbBslr5A/profile-displayphoto-shrink_800_800/profile-displayphoto-shrink_800_800/0/1626736649555?e=1739404800&v=beta&t=ufaA4AIA_Eh8bhzhRTfFaLd_gGe8hMvRBJ3aexboHyQ"
+              alt="Gonzalo Cordoba | Frontend Developer"
               layout="fill"
               objectFit="cover"
               priority
             />
           </div>
           <h1 className="mb-4 text-4xl font-extrabold tracking-tight lg:text-5xl">
-            Tu Nombre
+            Gonzalo Cordoba
           </h1>
           <p className="mb-4 text-2xl font-bold">Frontend Developer</p>
           <p className="mx-auto max-w-[700px] text-lg text-muted-foreground">
-            Creando experiencias web únicas y atractivas con las últimas
-            tecnologías frontend.
+            Soy un desarrollador front-end especializado en construir interfaces
+            web modernas y atractivas. Con experiencia en React, TypeScript,
+            HTML, CSS, y Next.js, me apasiona transformar ideas en experiencias
+            de usuario intuitivas y eficientes. Además, domino Git para
+            colaborar en proyectos de manera ágil y efectiva.
           </p>
           <div className="mt-8">
             <Button asChild>
