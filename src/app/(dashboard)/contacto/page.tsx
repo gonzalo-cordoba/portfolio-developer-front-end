@@ -13,6 +13,7 @@ import {
   CardTitle,
 } from "@/components/ui/card";
 import { Github, Linkedin } from "lucide-react";
+import { useToast } from "@/hooks/use-toast";
 
 export default function Contacto() {
   const [formData, setFormData] = useState({
@@ -26,6 +27,9 @@ export default function Contacto() {
     email: "",
     mensaje: "",
   });
+
+  const [isSubmitting, setIsSubmitting] = useState(false);
+  const { toast } = useToast();
 
   const handleChange = (
     e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>
@@ -66,12 +70,38 @@ export default function Contacto() {
     return isValid;
   };
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     if (validateForm()) {
-      console.log(formData);
-      setFormData({ nombre: "", email: "", mensaje: "" });
-      // Aquí puedes agregar la lógica para enviar el formulario
+      setIsSubmitting(true);
+      try {
+        const response = await fetch("/api/contact", {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json",
+          },
+          body: JSON.stringify(formData),
+        });
+
+        if (response.ok) {
+          toast({
+            title: "Mensaje enviado",
+            description: "Gracias por contactarme. Te responderé pronto.",
+          });
+          setFormData({ nombre: "", email: "", mensaje: "" });
+        } else {
+          throw new Error("Error al enviar el mensaje");
+        }
+      } catch (error) {
+        toast({
+          title: "Error",
+          description:
+            "Hubo un problema al enviar tu mensaje. Por favor, intenta de nuevo.",
+          variant: "destructive",
+        });
+      } finally {
+        setIsSubmitting(false);
+      }
     }
   };
 
@@ -139,8 +169,13 @@ export default function Contacto() {
             </form>
           </CardContent>
           <CardFooter>
-            <Button type="submit" className="w-full" onClick={handleSubmit}>
-              Enviar mensaje
+            <Button
+              type="submit"
+              className="w-full"
+              onClick={handleSubmit}
+              disabled={isSubmitting}
+            >
+              {isSubmitting ? "Enviando..." : "Enviar mensaje"}
             </Button>
           </CardFooter>
         </Card>
