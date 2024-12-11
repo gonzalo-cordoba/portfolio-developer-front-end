@@ -12,7 +12,7 @@ El proyecto está construido con las siguientes tecnologías:
 - [Framer Motion](https://www.framer.com/motion/): Animaciones fluidas y personalizables.
 - [Radix UI](https://www.radix-ui.com/): Componentes accesibles y estilizados para React.
 - [Lucide Icons](https://lucide.dev/): Colección de íconos minimalistas y personalizables.
-- [Nodemailer](https://nodemailer.com/): Enío de correos electrónicos desde el formulario de contacto.
+- [Nodemailer](https://nodemailer.com/): Envío de correos electrónicos desde el formulario de contacto.
 - [TypeScript](https://www.typescriptlang.org/): Superset tipado de JavaScript para un desarrollo más seguro y escalable.
 - [ESLint](https://eslint.org/) y [Prettier](https://prettier.io/): Herramientas para mantener un código limpio y consistente.
 
