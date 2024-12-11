@@ -17,7 +17,7 @@ const experiences = [
   {
     title: "Desarrollador Front-End | Landing Page Stackly",
     type: "Freelance",
-    period: "Noviembre 2024-Diciembre 2024",
+    period: "Diciembre 2024",
     description:
       "Desarrollé una landing page para una empresa especializada en infraestructura de datos financieros modernos para el sector fintech. Esta página fue diseñada para reflejar su enfoque en integrar datos de múltiples proveedores bancarios y bases de datos de fintech, con el objetivo de agilizar operaciones, reducir riesgos de fraude y mejorar la eficiencia operativa. El diseño se centró en transmitir confianza, innovación y la capacidad de la empresa para optimizar los procesos clave dentro de las fintechs.",
     technologies: ["React", "TypeScript", "Next.js", "shadcn/ui"],
@@ -25,7 +25,7 @@ const experiences = [
   {
     title: "Desarrollador Front-End | Landing Page Dot Dager",
     type: "Proyecto personal",
-    period: "Noviembre 2024-Diciembre 2024",
+    period: "Noviembre 2024",
     description:
       "Landing page para un youtuber del ambiente IT, destacando su trayectoria y mostrando sus pasiones. La página incluye secciones que detallan su contenido, intereses personales y la conexión que busca generar con su audiencia. El diseño fue creado para capturar la esencia de su marca y personalidad, con un enfoque en crear una experiencia atractiva y auténtica para sus seguidores.",
     technologies: ["React", "TypeScript", "Next.js"],
