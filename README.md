@@ -2,7 +2,7 @@
 
 Este repositorio contiene el código fuente de mi portafolio como desarrollador front-end. El objetivo del proyecto es mostrar mis habilidades, proyectos y experiencia de una manera atractiva y profesional.
 
-## Tecnologías utilizadas
+## Tecnologías utilizadas 🛠️
 
 El proyecto está construido con las siguientes tecnologías:
 
@@ -24,10 +24,10 @@ El proyecto está construido con las siguientes tecnologías:
 - **Diseño responsivo:** Compatible con dispositivos móviles, tabletas y pantallas grandes.
 - **Componentes accesibles:** Uso de Radix UI para garantizar la accesibilidad.
 
-## Licencia
+## Licencia 📄
 
 Este proyecto está bajo la licencia [MIT](LICENSE). Puedes usar el código para cualquier propósito, siempre y cuando incluyas el aviso de licencia original.
 
 ---
 
-Si tienes alguna sugerencia o comentario, no dudes en contactarme. ¡Gracias por visitar mi portafolio!
+Si tienes alguna sugerencia o comentario, no dudes en contactarme. ¡Gracias por visitar mi portafolio!🙌
