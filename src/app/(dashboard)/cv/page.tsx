@@ -2,7 +2,6 @@
 
 import { motion } from "framer-motion";
 import { Badge } from "@/components/ui/badge";
-import { Button } from "@/components/ui/button";
 import {
   Card,
   CardContent,
@@ -30,6 +29,24 @@ const experiences = [
       "Landing page para un youtuber del ambiente IT, destacando su trayectoria y mostrando sus pasiones. La página incluye secciones que detallan su contenido, intereses personales y la conexión que busca generar con su audiencia. El diseño fue creado para capturar la esencia de su marca y personalidad, con un enfoque en crear una experiencia atractiva y auténtica para sus seguidores.",
     technologies: ["React", "TypeScript", "Next.js"],
   },
+
+  {
+    title:
+      "Desarrollo de Ecommerce de Productos Electrónicos como Proyecto Freelance",
+    type: "Proyecto freelance privado",
+    period: "Julio 2024–Septiembre 2024",
+    description:
+      "Diseñé y desarrollé la interfaz de usuario de una plataforma de ecommerce especializada en productos electrónicos utilizando React, TypeScript y Next.js. Integré Firebase para gestionar productos, usuarios y pedidos, además de implementar un sistema de autenticación segura con Firebase Authentication. Optimicé el rendimiento web, y aseguré una colaboración eficiente en equipo utilizando GitHub para el control de versiones, revisiones de código y gestión de pull requests.",
+    technologies: ["React", "TypeScript", "Next.js", "Firebase"],
+  },
+  {
+    title: "Desarrollo de Sistema de Venta de Tickets para Teatro Municipal",
+    type: "Proyecto freelance privado",
+    period: "Marzo 2024 -Julio 2024",
+    description:
+      "Diseñé y desarrollé la interfaz de usuario de un sistema de venta de tickets para un teatro municipal utilizando React, TypeScript, y Next.js, priorizando una experiencia fluida y eficiente. Implementé componentes estilizados y accesibles con shadcn/ui, y utilicé Zustand para gestionar el estado global de forma reactiva y sencilla. Aseguré la calidad del proyecto mediante el uso de GitHub para el control de versiones, con pull requests y revisiones de código. Además, optimicé el rendimiento aplicando buenas prácticas de desarrollo para mejorar la velocidad y eficiencia del proceso de compra.",
+    technologies: ["React", "TypeScript", "Next.js", "Zustand", "Shadcn/ui"],
+  },
 ];
 
 const skills = [
@@ -42,6 +59,8 @@ const skills = [
   },
   { name: "Git", logo: "/git.png" },
   { name: "Node.js", logo: "/node.png" },
+  { name: "PostgreSQL", logo: "/postgre.png" },
+  { name: "Prisma", logo: "/prisma.svg" },
   { name: "Docker", logo: "/docker.png" },
   { name: "HTML5", logo: "/html.png" },
   { name: "CSS", logo: "/css.png" },
@@ -142,9 +161,9 @@ export default function CV() {
                       </Badge>
                     ))}
                   </div>
-                  <Button variant="ghost" className="text-sm">
+                  {/* <Button variant="ghost" className="text-sm">
                     Ver más detalles →
-                  </Button>
+                  </Button> */}
                 </CardContent>
               </Card>
             </motion.div>
