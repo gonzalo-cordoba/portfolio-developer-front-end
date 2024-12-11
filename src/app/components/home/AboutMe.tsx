@@ -46,7 +46,7 @@ export const projects = [
     title: "Portfolio Personal",
     description: "Mi portfolio personal mostrando mis proyectos y habilidades.",
     imageUrl: "/portfolio.webp",
-    projectUrl: "https://portfolio-developer-front-end.vercel.app/",
+    projectUrl: "https://gonzalocordoba-portfolio.vercel.app/",
     githubUrl:
       "https://github.com/gonzalo-cordoba/portfolio-developer-front-end",
     technologies: [
