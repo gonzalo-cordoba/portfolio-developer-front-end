@@ -14,6 +14,8 @@ import {
 } from "react-icons/si";
 import { ProjectCard } from "@/components";
 
+import picture from "../../../../public/gonzalo-cordoba.jpeg";
+
 export const projects = [
   {
     title: "Stackly- Landing Page",
@@ -82,7 +84,7 @@ export const AboutMe = () => {
         <div className="flex flex-col items-center">
           <div className="mb-8 relative w-40 h-40 overflow-hidden rounded-full border-4 border-primary">
             <Image
-              src="https://media.licdn.com/dms/image/v2/C4E03AQES7mIbBslr5A/profile-displayphoto-shrink_800_800/profile-displayphoto-shrink_800_800/0/1626736649555?e=1739404800&v=beta&t=ufaA4AIA_Eh8bhzhRTfFaLd_gGe8hMvRBJ3aexboHyQ"
+              src={picture}
               alt="Gonzalo Cordoba | Frontend Developer"
               fill
               style={{ objectFit: "cover" }}
